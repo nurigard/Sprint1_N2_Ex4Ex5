@@ -1,0 +1,293 @@
+
+*{
+    box-sizing: border-box;
+    margin:5px;
+    padding:5px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    margin-top: 0;
+    
+}
+
+
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Header -----------*/
+
+header{
+    background-image: url("../img/Activitat\ Flex\ -\ Nivell\ 2\ -\ fons\ capçalera.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+}
+
+.navHeader{ 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logoNavHeader{   
+    flex: 1 1 auto;
+    display: flex;
+}
+
+ .menuNavHeader{
+    flex: 4 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+.menuNavHeader ul {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items:flex-start;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+
+li {
+    flex: 1 1 auto;
+    margin-left:0;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.menuNavHeader a {
+    text-decoration:none;
+    font-weight: bold;
+    color:rgb(22, 22, 22)
+    
+}
+
+.xarxesNavHeader{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.xarxesNavHeader a {
+    color:rgb(22, 22, 22)
+}
+
+a:hover{
+    color:royalblue;
+}
+
+.imgHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0;
+}
+
+.h1ImgHeader{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.h1ImgHeader h1{
+    font-family: 'Roboto Slab', serif;
+    color:rgba(240, 128, 128, 0.658) ;
+    padding: 0;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+blockquote{
+    quotes:"\201C" "\201D";
+}
+
+blockquote:before { 
+    content: open-quote;
+    font-size: 3rem;
+}
+
+blockquote:after  { 
+    content: close-quote; 
+    font-size: 3rem;
+}
+
+
+/*----------- Main ------------*/
+
+main{
+    background-color:darkgrey;
+    display: flex;
+}
+
+.articlesMain{
+    background-color:lightgray;
+    flex: 2 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.articleArticlesMain{
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+}
+
+.articleArticlesMain h2{
+    background-color: crimson;
+    color: white;
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 15px;
+}
+
+.articleArticlesMain p{
+    text-align: justify;
+    color:rgb(70, 70, 70);
+    font-weight:bold ;
+}
+
+.articleArticlesMain p:nth-child(5){
+    color: lightslategrey;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 15px;
+}
+
+.articleArticlesMain p:nth-child(2){
+    color: white;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top:-20px;
+    font-size: 0.7rem;
+}
+
+
+.articleArticlesMain img{
+    max-width:100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.menuArticlesMain{
+    background-color:linen;
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.asideMain{
+    background-color:linen;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.anunciAsideMain{
+    background-color:grey;
+}
+
+/*-------- Footer ----------*/
+
+footer{
+    background-color:darkgrey;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.dadesEmpresaFooter{
+    background-color:linen;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*------ MEDIA QUERY - Versio TAULETA ----- Breakpoint a 780 px ------*/
+
+@media only screen and (max-width: 780px){
+    main{
+        flex-direction: column; 
+    }
+
+
+    .h1ImgHeader h1{
+        font-size: 1.5rem;
+    }
+
+    .asideMain{
+        margin-top: 5px;
+        margin-left:0;
+        align-items: center;
+    }
+
+
+
+}
+
+
+/*------ MEDIA QUERY - Versio MOBIL ----- Breakpoint a 618 px ------*/
+
+@media only screen and (max-width: 618px){
+    .navHeader{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menuNavHeader{
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .menuNavHeader ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoNavHeader{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .imgHeader{
+        align-items: center;
+    }
+
+    .h1ImgHeader h1{
+        font-size: 2rem;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    .asideMain{
+        margin-top: 5px;
+        padding: 0;
+    }
+
+}
+
